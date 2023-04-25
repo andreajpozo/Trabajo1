@@ -1,28 +1,62 @@
 <head>
   <meta charset="utf-8">
   <title> Formulario Curriculum Vitae </title>
+  <style>
+    body{
+	height: 100%; 
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	background-color: #4c4c4c; 
+	}
+
+	h1{
+	font-size: 39px;  
+	text-align: left; 
+	padding-bottom: 20px; 
+	color: white;
+	}
+
+	h2{
+	font-size: 39px;  
+	text-align: left; 
+	padding-bottom: 20px; 
+	color: white;
+	}
+
+
+	h3{	
+	font-size: 16px; 
+	padding-bottom: 30px;
+	color: #0e0e0e;   
+	}
+
+
+	p{
+	font-size: 14px; 
+	color: #0e0e0e; 
+	}
+  </style>
 </head>
 <body>
 <h1> Formulario </h1>
 <form action="{{ url_for("formulario")}}" method="post">
 
 <label for="firstname">Nombre:</label>
-<input type="text" id="firstname" name="fname" placeholder="firstname">
+<input type="text" id="firstname" name="fname" placeholder="firstname"><br><br> 
 
 <label for="lastname">Apellido:</label>
 <input type="text" id="lastname" name="lname" placeholder="lastname"><br><br>
 
 <label for="nacimiento"> Fecha de Nacimiento: </label>
-<input type="date" name="nacimiento"><br>
+<input type="date" name="nacimiento"><br><br>
 
 <label for="ocupacion"> Ocupación: </label><br>
-<input type="text" name="ocupacion"><br>
+<input type="text" name="ocupacion"><br><br>
 
 <label for="contacto1"> Teléfono: </label><br>
-<input type="text" name="contacto1"><br>
+<input type="text" name="contacto1"><br><br>
 
 <label for="contacto2"> E-mail: </label><br>
-<input type="text" name="contacto2"><br>
+<input type="text" name="contacto2"><br><br>
 
 <label for="nacionalidad"> Nacionalidad: </label><br>
 <select name = "nacionalidad">
@@ -32,7 +66,7 @@
   <option value="chileno"> chileno </option>
 </select><br><br>
 
-<p>Seleccione su nivel de inglés:</p>
+<h2>Seleccione su nivel de inglés:</h2>
   <input type="radio" name="Inglés" value="basico">
   <label for="basico"> Básico </label><br>
   <input type="radio" name="Inglés" value="intermedio">
@@ -51,7 +85,7 @@
   <option>Java</option>
 </select><br><br>
 
-<label for="apt">Aptitudes:</label>
+<label for="apt">Aptitudes:</label><br>
 <input list="aptitudes"  name="Aptitudes" />
 <datalist id="aptitudes">
     <option value="Inteligencia emocional">
@@ -59,14 +93,14 @@
     <option value="Trabajo en equipo">
     <option value="Resolucion de problemas">
     <option value="capacidad de liderazgo">
-</datalist><br>
+</datalist><br><br>
 
 <label for="Habilidades">Habilidades:</label><br>
 	<input type="checkbox" name="habili">
 	<label for="habili">Acondicionamiento físico</label><br>
 
     <input type="checkbox" name="habili">
-    <label for="habili">Creación videos deportivos</label>
+    <label for="habili">Creación videos deportivos</label><br><br>
 
 
 <button type="submit">Login</button>
